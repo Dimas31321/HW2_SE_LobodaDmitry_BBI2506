@@ -32,5 +32,6 @@ python -m pytest
 2. Запуск конкретного теста 
 python -m pytest tests/test_ingredient.py
 
+Автор
 Лобода Дмитрий Юрьевич
 ББИ2506
