@@ -1,5 +1,5 @@
-from recipe import Recipe
-from ingredient import Ingredient
+from src.recipe import Recipe
+from src.ingredient import Ingredient
 
 class ShoppingList:
   def __init__(self):
@@ -7,7 +7,7 @@ class ShoppingList:
   def __len__(self):
     return len(self._items)
   def add_recipe(self, recipe: Recipe, portions: float):
-    if portions <0:
+    if portions <=0:
       raise ValueError("Количество порций должно быть положительным")
     new_recipe = recipe.scale(portions)
     for ingr in new_recipe.ingredients:
@@ -31,5 +31,5 @@ class ShoppingList:
     ingredients = []
     for (name, unit), quantity in result.items():
         ingredients.append(Ingredient(name, quantity, unit))
-    ingredients.sort(lambda ingredient : ingredient.name)
-    return result
+    ingredients.sort(key=lambda ingredient : ingredient.name)
+    return ingredients
