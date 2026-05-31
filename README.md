@@ -26,11 +26,14 @@ source .venv/bin/activate
 pip install -r requirements.txt
 
 Эксплуатация
-1. Запуск всех тестов:
-python -m pytest
 
-2. Запуск конкретного теста 
-python -m pytest tests/test_ingredient.py
+Клонируйте репозиторий:
+1. git clone https://github.com/Dimas31321/HW2_SE_LobodaDmitry_BBI2506.git
+  cd HW2_SE_LobodaDmitry_BBI2506
+2. Сделайте скрипт исполняемым:
+  chmod +x run_tests.sh
+3. Запустите скрипт:
+  ./run_tests.sh
 
 Автор
 Лобода Дмитрий Юрьевич
