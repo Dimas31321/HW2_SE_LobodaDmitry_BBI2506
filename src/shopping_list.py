@@ -33,3 +33,7 @@ class ShoppingList:
         ingredients.append(Ingredient(name, quantity, unit))
     ingredients.sort(key=lambda ingredient : ingredient.name)
     return ingredients
+  def __add__(self, other):
+    new_list = ShoppingList()
+    new_list._items = self._items.copy() + other._items.copy()
+    return new_list

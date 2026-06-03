@@ -15,7 +15,7 @@ class Recipe:
     if isinstance(ratio, (int, float)) and ratio>0:
       return True
     return False
-  def scale(self, ratio: float):
+  def scale(self, ratio: float) -> 'Recipe':
     if not Recipe.is_valid_ratio(ratio):
         raise ValueError("Коэффициент должен быть положительным")
     new_recipe = Recipe(self.title)
